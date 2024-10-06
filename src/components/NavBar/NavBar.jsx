@@ -9,10 +9,10 @@ const NavBar = () => {
             </div>
 
             <ul className="menu">
-                <li>Inicio</li>
-                <li>Periféricos</li>
-                <li>Componentes PC</li>
-                <li>Contacto</li>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Periféricos</a></li>
+                <li><a href="">Componentes PC</a></li>
+                <li><a href="">Contacto</a></li>
             </ul>
 
             <CartWidget/>
