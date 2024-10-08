@@ -1,14 +1,13 @@
 import CartWidget from "./CartWidget"
 import AdicionalNavBar from "./AdicionalNavBar"
-import perfil from '../../assets/perfil.webp';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Inicio', href: '#', current: false },
-  { name: 'Hogar', href: '#', current: false },
-  { name: 'Jardin', href: '#', current: false },
-  { name: 'Cocina', href: '#', current: false },
+  { name: 'Zapatillas', href: '#', current: false },
+  { name: 'Ropa', href: '#', current: false },
+  { name: 'Accesorios', href: '#', current: false },
   { name: 'Contacto', href: '#', current: false },
 ]
 
@@ -19,7 +18,7 @@ function classNames(...classes) {
 const NavBar = () => {
   return (
     <>
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-orange-900">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -117,7 +116,6 @@ const NavBar = () => {
         </div>
       </DisclosurePanel>
     </Disclosure>
-    
     <AdicionalNavBar/>
     </>
   )
