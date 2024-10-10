@@ -19,7 +19,7 @@ const ItemListContainer = ({saludo}) => {
     },[])
 
     return(
-        <div className="text-center antialiased">
+        <div className="text-center antialiased flex flex-col items-center">
             <h1 className="mx-0 my-4 underline">
                 {saludo}
             </h1>
