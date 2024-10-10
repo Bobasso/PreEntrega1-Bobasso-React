@@ -39,6 +39,16 @@ const products = [
         image: "/img/pantalon-azul.png",
         category: "ropa",
         subcategory: "pantalon"
+    },
+    {
+        id: "Nj8902",
+        name: "Pantalon Azul",
+        description: "",
+        stock: 20,
+        price: 1500,
+        image: "/img/pantalon-azul.png",
+        category: "ropa",
+        subcategory: "pantalon"
     }
 ]
 
