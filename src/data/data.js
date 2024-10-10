@@ -6,8 +6,8 @@ const products = [
         stock: 10,
         price: 2000,
         image: "/img/remera-roja.png",
-        category: "remeras",
-        sex: "hombre"
+        category: "ropa",
+        subcategory: "remera"
         // active: true => Lo utilizo para decir si esta disponible el producto o no
     },
     {
@@ -17,8 +17,8 @@ const products = [
         stock: 2,
         price: 1000,
         image: "/img/gorra-nike.png",
-        category: "gorras",
-        sex: "unisex"
+        category: "accesorio",
+        subcategory: "gorra"
     },
     {
         id: "Le1040",
@@ -28,7 +28,7 @@ const products = [
         price: 5000,
         image: "/img/zapatillas-verdes.webp",
         category: "zapatillas",
-        sex: "mujer"
+        subcategory: "mujer"
     },    
     {
         id: "Qw5648",
@@ -37,8 +37,8 @@ const products = [
         stock: 20,
         price: 1500,
         image: "/img/pantalon-azul.png",
-        category: "pantalon",
-        sex: "hombre"
+        category: "ropa",
+        subcategory: "pantalon"
     }
 ]
 
