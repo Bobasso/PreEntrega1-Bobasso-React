@@ -20,7 +20,7 @@ const NavBar = () => {
     <>
     <Disclosure as="nav" className="bg-orange-900">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
+        <div className="relative flex h-20 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -34,11 +34,11 @@ const NavBar = () => {
             <div className="flex flex-shrink-0 items-center">
               <img
                 alt="Ecommerce"
-                src="" // Logo del Ecommerce
-                className="h-8 w-auto"
+                src="/svg/Logo.svg" // Logo
+                className="h-10 sm:h-14 w-auto"
               />
             </div>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden sm:ml-6 sm:block my-auto">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
                   <a
@@ -46,7 +46,7 @@ const NavBar = () => {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 transition ease-in-out hover:bg-[rgb(190,80,30)] hover:text-white hover:-translate-y-1 hover:scale-110',
                       'rounded-md px-3 py-2 text-sm font-medium',
                     )}
                   >

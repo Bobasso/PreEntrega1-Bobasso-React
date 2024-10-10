@@ -4,9 +4,9 @@ const CartWidget = () => {
     return(
         <div className="flex flex-row text-white">
             <button className="h-8">
-                <HiShoppingCart/>
+                <HiShoppingCart className="h-5 w-5 sm:h-8 sm:w-8"/>
             </button>
-            <p className="text-s">0</p>
+            <p className="text-sm hover:cursor-default">0</p>
         </div>
     )
 }
