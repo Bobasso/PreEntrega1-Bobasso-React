@@ -19,8 +19,8 @@ const ItemListContainer = ({saludo}) => {
     },[])
 
     return(
-        <div className="text-center grid grid-cols-4 gap-4">
-            <h1 className="mx-0 my-4 col-span-1">
+        <div className="text-center antialiased">
+            <h1 className="mx-0 my-4 underline">
                 {saludo}
             </h1>
             <ItemList products={products}/>

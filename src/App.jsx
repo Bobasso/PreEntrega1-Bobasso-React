@@ -7,8 +7,10 @@ function App() {
   return (
     <div className='min-h-screen flex flex-col'>
       <NavBar/>
-      <ItemListContainer saludo={"Filtros"}/>
-      <ItemListContainer saludo={"Este es mi ecommerce"}/>
+      <main className='flex-grow'>
+        <ItemListContainer saludo={"Zapatillas"}/>
+        <ItemListContainer saludo={"Este es mi ecommerce"}/>
+      </main>
       <Footer/>
     </div>
   )
