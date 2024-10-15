@@ -1,6 +1,6 @@
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemListContainerWithHoc from './components/ItemListContainer/ItemListContainer'
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -8,8 +8,7 @@ function App() {
     <div className='min-h-screen flex flex-col'>
       <NavBar/>
       <main className='flex-grow'>
-        <ItemListContainer saludo={"Zapatillas"}/>
-        <ItemListContainer saludo={"Este es mi ecommerce"}/>
+          <ItemListContainerWithHoc/>
       </main>
       <Footer/>
     </div>
