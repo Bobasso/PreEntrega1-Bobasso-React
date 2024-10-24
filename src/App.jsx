@@ -29,11 +29,7 @@ function App() {
                 </>
               }/>
 
-              <Route path="/product/:idProduct" element={  
-                <>
-                  <ItemDetailContainer/>
-                </>
-              }/>
+              <Route path="/product/:idProduct" element={ <ItemDetailContainer/> }/>
 
               <Route path="/contacto" element={ <Contacto/> }/>
             </Routes>
