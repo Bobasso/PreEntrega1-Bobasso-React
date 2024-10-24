@@ -20,8 +20,21 @@ function App() {
                   <Header/>
                   <ItemListContainerWithHoc/>
                 </>
-                }/>
-              <Route path="" element={ <ItemDetailContainer/> }/>
+              }/>
+
+              <Route path="/category/:idCategory" element={  
+                <>
+                  <Header/>
+                  <ItemListContainerWithHoc/>
+                </>
+              }/>
+
+              <Route path="/product/:idProduct" element={  
+                <>
+                  <ItemDetailContainer/>
+                </>
+              }/>
+
               <Route path="/contacto" element={ <Contacto/> }/>
             </Routes>
           </main>

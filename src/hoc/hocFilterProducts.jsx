@@ -4,7 +4,7 @@ import Filter from "../components/Filter/Filter"
 
 const hocFilterProducts = (Component) => {
     return function () {
-        const { products} = useProducts()
+        const { products } = useProducts()
         const [query, setQuery] = useState("")
         const [typeOrder, setTypeOrder] = useState("")
 

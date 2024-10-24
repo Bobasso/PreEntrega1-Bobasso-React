@@ -17,7 +17,7 @@ const products = [
         stock: 2,
         price: 1000,
         image: "/img/gorra-nike.png",
-        category: "Accesorio",
+        category: "Accesorios",
         subcategory: "gorra"
     },
     {
@@ -56,7 +56,7 @@ const getProducts = () => {
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
             resolve(products)
-        },2000)
+        },1000)
     })
 }
 
