@@ -2,7 +2,7 @@ const products = [
     {
         id: "Df2121",
         name: "Remera Roja",
-        description: "",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, error, impedit quidem earum soluta aliquid fuga, esse suscipit natus voluptate eum nostrum eveniet quibusdam culpa voluptas quia at asperiores porro.",
         stock: 10,
         price: 2000,
         image: "/img/remera-roja.png",
