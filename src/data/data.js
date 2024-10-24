@@ -2,56 +2,55 @@ const products = [
     {
         id: "Df2121",
         name: "Remera Roja",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, error, impedit quidem earum soluta aliquid fuga, esse suscipit natus voluptate eum nostrum eveniet quibusdam culpa voluptas quia at asperiores porro.",
+        description: "desc",
         stock: 10,
         price: 2000,
         image: "/img/remera-roja.png",
-        category: "ropa",
+        category: "Ropa",
         subcategory: "remera"
         // active: true => Lo utilizo para decir si esta disponible el producto o no
     },
     {
         id: "Gt2333",
         name: "Gorra Nike",
-        description: "",
+        description: "desc",
         stock: 2,
         price: 1000,
         image: "/img/gorra-nike.png",
-        category: "accesorio",
+        category: "Accesorio",
         subcategory: "gorra"
     },
     {
         id: "Le1040",
         name: "Zapatillas Verdes",
-        description: "",
+        description: "desc",
         stock: 5,
         price: 5000,
         image: "/img/zapatillas-verdes.webp",
-        category: "zapatillas",
+        category: "Zapatillas",
         subcategory: "mujer"
     },    
     {
         id: "Qw5648",
         name: "Pantalon Azul",
-        description: "",
+        description: "desc",
         stock: 20,
         price: 1500,
         image: "/img/pantalon-azul.png",
-        category: "ropa",
+        category: "Ropa",
         subcategory: "pantalon"
     },
     {
         id: "Nj8902",
         name: "Pantalon Azul",
-        description: "",
+        description: "desc",
         stock: 20,
         price: 1500,
         image: "/img/pantalon-azul.png",
-        category: "ropa",
+        category: "Ropa",
         subcategory: "pantalon"
     }
 ]
-
 
 const getProducts = () => {
     return new Promise((resolve, reject)=>{

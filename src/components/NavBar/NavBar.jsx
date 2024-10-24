@@ -2,13 +2,13 @@ import CartWidget from "./CartWidget"
 import AdicionalNavBar from "./AdicionalNavBar"
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from "react-router-dom"
 
 const navigation = [
-  { name: 'Inicio', href: '#', current: false },
-  { name: 'Zapatillas', href: '#', current: false },
-  { name: 'Ropa', href: '#', current: false },
-  { name: 'Accesorios', href: '#', current: false },
-  { name: 'Contacto', href: '#', current: false },
+  { name: 'Zapatillas', href: '/category/Zapatillas', current: false },
+  { name: 'Ropa', href: '/category/Ropa', current: false },
+  { name: 'Accesorios', href: '/category/Accesorios', current: false },
+  { name: 'Contacto', href: '/contacto', current: false },
 ]
 
 function classNames(...classes) {
@@ -31,19 +31,19 @@ const NavBar = () => {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
+            <Link to="/" className="flex flex-shrink-0 items-center">
               <img
                 alt="Ecommerce"
                 src="/svg/Logo.svg" // Logo
                 className="h-10 sm:h-14 w-auto"
               />
-            </div>
+            </Link>
             <div className="hidden sm:ml-6 sm:block my-auto">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-300 transition ease-in-out hover:bg-[rgb(190,80,30)] hover:text-white hover:-translate-y-1 hover:scale-110',
@@ -51,7 +51,7 @@ const NavBar = () => {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
