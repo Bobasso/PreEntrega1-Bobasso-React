@@ -1,5 +1,4 @@
 import CartWidget from "./CartWidget"
-import AdicionalNavBar from "./AdicionalNavBar"
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-router-dom"
@@ -81,7 +80,6 @@ const NavBar = () => {
         </div>
       </DisclosurePanel>
     </Disclosure>
-    <AdicionalNavBar/>
     </>
   )
 }
