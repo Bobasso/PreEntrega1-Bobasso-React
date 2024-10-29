@@ -45,7 +45,7 @@ const NavBar = () => {
                     to={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 transition ease-in-out hover:bg-[rgb(190,80,30)] hover:text-white hover:-translate-y-1 hover:scale-110',
+                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 transition ease-in-out duration-500 hover:bg-[rgb(190,80,30)] hover:text-white hover:-translate-y-1 hover:scale-110',
                       'rounded-md px-3 py-2 text-sm font-medium',
                     )}
                   >
