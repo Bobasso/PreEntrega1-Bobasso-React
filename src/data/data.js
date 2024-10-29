@@ -60,10 +60,4 @@ const getProducts = () => {
     })
 }
 
-const getProductsWithoutTimeout = () => {
-    return new Promise((resolve, reject)=>{
-            resolve(products)
-    })
-}
-
-export { getProducts, getProductsWithoutTimeout }
+export { getProducts }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { getProductsWithoutTimeout } from "../../data/data.js"
+import { getProducts } from "../../data/data.js"
 import ItemDetail from "./ItemDetail.jsx" 
 import { useParams } from "react-router-dom"
 
@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {
     const { idProduct } = useParams()
 
     useEffect(()=>{
-        getProductsWithoutTimeout()
+        getProducts()
             .then((data)=>{
                 const findProduct = data.find( (product)=> product.id === idProduct )
                 setProduct(findProduct)
