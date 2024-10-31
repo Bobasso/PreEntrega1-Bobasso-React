@@ -6,8 +6,7 @@ const products = [
         stock: 10,
         price: 2000,
         image: "/img/remera-roja.png",
-        category: "Ropa",
-        subcategory: "remera"
+        category: "Ropa"
         // active: true => Lo utilizo para decir si esta disponible el producto o no
     },
     {
@@ -17,8 +16,7 @@ const products = [
         stock: 2,
         price: 1000,
         image: "/img/gorra-nike.png",
-        category: "Accesorios",
-        subcategory: "gorra"
+        category: "Accesorios"
     },
     {
         id: "Le1040",
@@ -27,8 +25,7 @@ const products = [
         stock: 5,
         price: 5000,
         image: "/img/zapatillas-verdes.webp",
-        category: "Zapatillas",
-        subcategory: "mujer"
+        category: "Zapatillas"
     },    
     {
         id: "Qw5648",
@@ -37,8 +34,7 @@ const products = [
         stock: 20,
         price: 1500,
         image: "/img/pantalon-azul.png",
-        category: "Ropa",
-        subcategory: "pantalon"
+        category: "Ropa"
     },
     {
         id: "Nj8902",
@@ -47,8 +43,7 @@ const products = [
         stock: 20,
         price: 1500,
         image: "/img/pantalon-azul.png",
-        category: "Ropa",
-        subcategory: "pantalon"
+        category: "Ropa"
     }
 ]
 
@@ -56,7 +51,7 @@ const getProducts = () => {
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
             resolve(products)
-        },1000)
+        },2000)
     })
 }
 

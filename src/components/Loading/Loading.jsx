@@ -1,10 +1,10 @@
-import { PulseLoader } from "react-spinners"
+import { BarLoader } from "react-spinners"
 
 const Loading = () => {
   return (
     <div className="my-24">
-        <h2>Cargando...</h2>
-        <PulseLoader />
+        <h2 className="my-3">Cargando...</h2>
+        <BarLoader />
     </div>
   )
 }
