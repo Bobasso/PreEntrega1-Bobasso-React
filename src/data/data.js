@@ -46,7 +46,7 @@ const products = [
         category: "Ropa"
     }
 ]
-
+/*
 const getProducts = () => {
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
@@ -59,6 +59,6 @@ const getProductsWithoutTimeout = () => {
     return new Promise((resolve, reject)=>{
             resolve(products)
     })
-}
+}*/
 
 export { getProducts, getProductsWithoutTimeout }
