@@ -4,10 +4,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-router-dom"
 
 const navigation = [
-  { name: 'Zapatillas', href: '/category/Zapatillas', current: false },
-  { name: 'Ropa', href: '/category/Ropa', current: false },
-  { name: 'Accesorios', href: '/category/Accesorios', current: false },
-  { name: 'Contacto', href: '/contacto', current: false },
+  { name: 'Zapatillas', link: '/category/Zapatillas', current: false },
+  { name: 'Ropa', link: '/category/Ropa', current: false },
+  { name: 'Accesorios', link: '/category/Accesorios', current: false },
+  { name: 'Contacto', link: '/contacto', current: false },
 ]
 
 function classNames(...classes) {
@@ -39,19 +39,13 @@ const NavBar = () => {
             </Link>
             <div className="hidden sm:ml-6 sm:block my-auto">
               <div className="flex space-x-4">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    aria-current={item.current ? 'page' : undefined}
-                    className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 transition ease-in-out duration-500 hover:bg-[rgb(190,80,30)] hover:text-white hover:-translate-y-1 hover:scale-110',
-                      'rounded-md px-3 py-2 text-sm font-medium',
-                    )}
-                  >
+                {
+                navigation.map((item) => (
+                  <Link key={item.name} to={item.link} aria-current={item.current ? 'page' : undefined} className={classNames( item.current ? 'bg-gray-900 text-white' : 'text-gray-300 transition ease-in-out duration-500 hover:bg-[rgb(190,80,30)] hover:text-white hover:-translate-y-1 hover:scale-110', 'rounded-md px-3 py-2 text-sm font-medium',)}>
                     {item.name}
                   </Link>
-                ))}
+                ))
+                }
               </div>
             </div>
           </div>
@@ -64,18 +58,18 @@ const NavBar = () => {
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {navigation.map((item) => (
-            <DisclosureButton
-              key={item.name}
-              as="a"
-              href={item.href}
-              aria-current={item.current ? 'page' : undefined}
-              className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
-              )}
-            >
-              {item.name}
-            </DisclosureButton>
+            <Link to={item.link} key={item.name}>
+                <DisclosureButton
+                  key={item.name}
+                  aria-current={item.current ? 'page' : undefined}
+                  className={classNames(
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'block rounded-md px-3 py-2 text-base font-medium',
+                  )}
+                >
+                  {item.name}
+              </DisclosureButton>
+            </Link>
           ))}
         </div>
       </DisclosurePanel>

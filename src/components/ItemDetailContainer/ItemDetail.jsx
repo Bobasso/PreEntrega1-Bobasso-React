@@ -1,9 +1,15 @@
-import ContadorItem from "../ContadorItem/ContadorItem"
+import ContadorItem from "../ContadorItem/ContadorItem";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({ product }) => {
 
+  const { addProductInCart }= useContext(CartContext)
+
   const addProduct = (count) => {
     const productCart = { ...product, quantity: count }
+
+    addProductInCart(productCart)
   }
 
   return (
