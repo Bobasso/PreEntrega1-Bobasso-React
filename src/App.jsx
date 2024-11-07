@@ -1,7 +1,6 @@
 import './App.css'
 import Header from './components/Header/Header'
 import NavBar from './components/NavBar/NavBar'
-import AdicionalNavBar from './components/AdicionalNavbar/AdicionalNavBar'
 import ItemListContainerWithHoc from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import Contacto from './components/Contacto/Contacto'
@@ -21,7 +20,6 @@ function App() {
               <Routes>
                 <Route path="/" element={ 
                   <>
-                    <AdicionalNavBar/>
                     <Header/>
                     <ItemListContainerWithHoc/>
                   </>
@@ -29,7 +27,6 @@ function App() {
 
                 <Route path="/category/:idCategory" element={  
                   <>
-                    <AdicionalNavBar/>
                     <Header/>
                     <ItemListContainerWithHoc/>
                   </>
@@ -37,7 +34,6 @@ function App() {
 
                 <Route path="/product/:idProduct" element={ 
                   <>
-                    <AdicionalNavBar/>
                     <ItemDetailContainer/>
                   </>
                 }/>

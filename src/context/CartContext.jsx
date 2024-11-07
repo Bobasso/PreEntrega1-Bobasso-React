@@ -6,7 +6,14 @@ const CartProvider = ({ children }) =>{
   const [cart, setCart] = useState([])
   
   const addProductInCart = (newProduct) => {
-    setCart( [ ...cart, newProduct ] )
+    const productIndex = cart.findIndex(product => product.id === newProduct.id);
+    if (productIndex === -1) {
+      setCart([ ...cart, newProduct ]);
+    } else {
+      const updatedCart = [...cart];
+      updatedCart[productIndex].quantity += newProduct.quantity;
+      setCart(updatedCart);
+    }
   }
 
   const totalQuantity = () =>{
