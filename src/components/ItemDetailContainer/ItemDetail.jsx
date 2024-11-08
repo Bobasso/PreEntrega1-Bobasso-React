@@ -22,7 +22,11 @@ const ItemDetail = ({ product }) => {
         icon: 'success',
         confirmButtonText: 'Seguir viendo productos',
         showDenyButton: true,
-        denyButtonText: "Terminar compra"
+        denyButtonText: "Terminar compra",
+        customClass: {
+          confirmButton: 'bg-white text-black hover:bg-gray-200 focus:ring-gray-300',
+          denyButton: 'bg-amber-700 text-white hover:bg-amber-800 focus:ring-amber-300'
+        }
       }).then((result) => {
         if (result.isDenied) {
           navigate('/cart')
