@@ -49,6 +49,7 @@ const Cart = () => {
                     )
                   }
                 </div>
+                <button className="rounded-lg border border-red-200 bg-red-500 text-white p-2 shadow-sm" onClick={deleteCart}>Vaciar carrito</button>
               </div>
             </div>
             <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
