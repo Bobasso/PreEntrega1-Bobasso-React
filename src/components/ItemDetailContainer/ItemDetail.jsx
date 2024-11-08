@@ -1,12 +1,13 @@
 import ContadorItem from "../ContadorItem/ContadorItem";
 import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const ItemDetail = ({ product }) => {
-  const [showAlert, setShowAlert] = useState(false);
+  const [showAlert, setShowAlert] = useState(false)
   const { addProductInCart }= useContext(CartContext)
+  const navigate = useNavigate();
 
   const addProduct = (count) => {
     const productCart = { ...product, quantity: count }
@@ -22,7 +23,10 @@ const ItemDetail = ({ product }) => {
         confirmButtonText: 'Seguir viendo productos',
         showDenyButton: true,
         denyButtonText: "Terminar compra"
-      }).then(() => {
+      }).then((result) => {
+        if (result.isDenied) {
+          navigate('/cart')
+        }
         setShowAlert(false);
       });
     }
