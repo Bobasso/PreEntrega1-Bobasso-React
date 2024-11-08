@@ -15,7 +15,7 @@ const ContadorItem = ({ stock, addProduct }) => {
         <div className="flex flex-col">
             <div className="flex items-center my-5">
                 <button className="w-8 bg-amber-700 hover:bg-amber-800 active:bg-amber-800 text-white" onClick={handleClickRemove}>-</button>
-                <p className="bg-slate-100 w-20 text-center">{count}</p>
+                <p className="bg-slate-200 w-20 text-center">{count}</p>
                 <button className="w-8 bg-amber-700 hover:bg-amber-800 active:bg-amber-800 text-white" onClick={handleClickAdd}>+</button>
             </div>
             <button className="bg-amber-700 hover:bg-amber-800 active:bg-amber-800 text-white py-2 px-4 rounded w-full md:w-4/5 xl:w-2/5" onClick={ () => addProduct(count) }>Agregar al carrito</button>

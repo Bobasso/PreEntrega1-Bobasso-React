@@ -4,12 +4,11 @@ import { CartContext } from "../../context/CartContext"
 
 const Cart = () => {
   const { cart, totalPrice, deleteProductById, deleteCart } = useContext(CartContext)
-  /*onClick={deleteProductById(productCart.id)}*/
+
   return (
     <div>
-      <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+      <section className="bg-gray-100 py-8 antialiased dark:bg-gray-900 md:py-16">
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
-          <h2 className="text-xl font-semibold text-gray-900 sm:text-2xl">Shopping Cart</h2>
           <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
             <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
               <div className="space-y-6">
@@ -27,10 +26,10 @@ const Cart = () => {
                               <p>Cantidad: {productCart.quantity}</p>
                             </div>
                             <div className="text-end md:order-4 md:w-32">
-                              <p className="text-base text-gray-300">c/u: ${productCart.price}</p>
+                              <p className="text-base text-gray-300">c/u: {productCart.price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</p>
                             </div>
                             <div className="text-end md:order-4 md:w-32">
-                              <p className="text-base font-bold text-gray-900">${productCart.quantity * productCart.price}</p>
+                              <p className="text-base font-bold text-gray-900">{(productCart.quantity * productCart.price).toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</p>
                             </div>
                           </div>
 
@@ -66,16 +65,16 @@ const Cart = () => {
                             <div className="space-y-2">
                               <dl className="flex items-center justify-between gap-4">
                                 <dt className="text-base font-normal text-gray-500">Precio Original</dt>
-                                <dd className="text-base font-medium text-gray-900">${totalPrice()}</dd>
+                                <dd className="text-base font-medium text-gray-900">{totalPrice().toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</dd>
                               </dl>
                               <dl className="flex items-center justify-between gap-4">
                                 <dt className="text-base font-normal text-gray-500">Pickup Tienda</dt>
-                                <dd className="text-base font-medium text-gray-900">$99</dd>
+                                <dd className="text-base font-medium text-gray-900">$ 99</dd>
                               </dl>
                             </div>
                             <dl className="flex items-center justify-between gap-4 border-t border-gray-200 pt-2">
                               <dt className="text-base font-bold text-gray-900">Precio Total</dt>
-                              <dd className="text-base font-bold text-gray-900">${totalPrice() + 99}</dd>
+                              <dd className="text-base font-bold text-gray-900">{(totalPrice() + 99).toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</dd>
                             </dl>
                           </div>
                           <button className="flex w-full items-center justify-center rounded-lg bg-amber-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-amber-800 focus:outline-none focus:ring-4 focus:ring-amber-300">Ir a pagar</button>
