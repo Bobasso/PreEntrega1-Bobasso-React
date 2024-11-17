@@ -4,4 +4,20 @@ Descubre una tienda donde la moda no conoce fronteras. 🧥👗 Encuentra prenda
 
 👉 #ModaGlobal #EstiloSinFronteras
 
-## Dependencias
+## Tecnologías utilizadas 🛠️
+### Lenguaje de programación
+- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript): Utilizado para la lógica de la aplicación y la interacción del usuario.
+- JSX (JavaScript XML): Extensión de sintaxis utilizada en componentes de React para combinar JavaScript y HTML.  
+
+### Dependencias
+- `tailwind`
+- `firebase`
+- `react-router-dom`
+- `react-toastify`
+- `sweetalert2`
+- `yup`
+- `heroicons`
+- `headlessui`
+
+### Herramientas de desarrollo
+- [Vite](https://es.vitejs.dev/): Para una configuración y desarrollo más rápidos. 
