@@ -7,7 +7,7 @@ const Cart = () => {
 
   return (
     <div>
-      <section className="bg-gray-100 py-8 antialiased dark:bg-gray-900 md:py-16">
+      <section className="bg-gray-100 py-8 antialiased md:py-16">
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
           <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
             <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
@@ -80,7 +80,7 @@ const Cart = () => {
                           </div>
                           <Link to="/checkout" className="flex w-full items-center justify-center rounded-lg bg-amber-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-amber-800 focus:outline-none focus:ring-4 focus:ring-amber-300">Ir a pagar</Link>
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-sm font-normal text-gray-500 dark:text-gray-400"> or </span>
+                            <span className="text-sm font-normal text-gray-500"> or </span>
                             <Link to="/" title="" className="inline-flex items-center gap-2 text-sm font-medium text-amber-700 underline hover:no-underline">
                               Continue Shopping
                               <svg className="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
