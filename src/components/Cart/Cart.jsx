@@ -78,7 +78,7 @@ const Cart = () => {
                               <dd className="text-base font-bold text-gray-900">{(totalPrice() + 99).toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</dd>
                             </dl>
                           </div>
-                          <button className="flex w-full items-center justify-center rounded-lg bg-amber-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-amber-800 focus:outline-none focus:ring-4 focus:ring-amber-300">Ir a pagar</button>
+                          <Link to="/checkout" className="flex w-full items-center justify-center rounded-lg bg-amber-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-amber-800 focus:outline-none focus:ring-4 focus:ring-amber-300">Ir a pagar</Link>
                           <div className="flex items-center justify-center gap-2">
                             <span className="text-sm font-normal text-gray-500 dark:text-gray-400"> or </span>
                             <Link to="/" title="" className="inline-flex items-center gap-2 text-sm font-medium text-amber-700 underline hover:no-underline">

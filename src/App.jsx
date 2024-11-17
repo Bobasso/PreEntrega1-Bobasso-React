@@ -7,6 +7,7 @@ import Contacto from './components/Contacto/Contacto'
 import Cart from './components/Cart/Cart'
 import { CartProvider } from './context/CartContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Checkout from './components/Checkout/Checkout'
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
 
                 <Route path="/contacto" element={ <Contacto/> }/>
                 <Route path="/cart" element={<Cart/>}/>
+                <Route path="/checkout" element={<Checkout/>}/>
               </Routes>
             </main>
 
