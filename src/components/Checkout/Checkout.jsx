@@ -73,7 +73,7 @@ const Checkout = () => {
             Swal.fire({
                 text: 'Orden creada con éxito',
                 icon: 'success',
-                text: "Por favor guarde su número de seguimiento: " + idOrder,
+                text: "Por favor guarde su número de orden: " + idOrder,
                 confirmButtonText: 'Volver al inicio',
                 customClass: {
                     confirmButton: 'bg-white text-black hover:bg-gray-200 focus:ring-gray-300',
