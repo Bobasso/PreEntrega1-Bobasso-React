@@ -69,7 +69,7 @@ const Cart = () => {
                                 <dd className="text-base font-medium text-gray-900">{totalPrice().toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</dd>
                               </dl>
                               <dl className="flex items-center justify-between gap-4">
-                                <dt className="text-base font-normal text-gray-500">Pickup Tienda</dt>
+                                <dt className="text-base font-normal text-gray-500">Envio</dt>
                                 <dd className="text-base font-medium text-gray-900">$ 99</dd>
                               </dl>
                             </div>
