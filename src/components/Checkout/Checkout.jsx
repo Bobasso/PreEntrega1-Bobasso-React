@@ -1,10 +1,12 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import FormCheckout from "./FormCheckout"
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { Timestamp, addDoc, collection, doc, setDoc } from "firebase/firestore"
 import db from "../../db/db.js"
 import { Link } from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Checkout = () => {
     const[dataForm, setDataForm] = useState({
@@ -12,7 +14,10 @@ const Checkout = () => {
         phone: "",
         email: ""
     })
-  
+
+    const [showAlert, setShowAlert] = useState(false)
+    const navigate = useNavigate();
+
     const [idOrder, setIdOrder] = useState(null)
     const { cart, totalPrice, deleteCart } = useContext(CartContext)
 
@@ -36,7 +41,10 @@ const Checkout = () => {
     const uploadOrder = (newOrder) => {
         const ordersRef = collection(db, "orders")
         addDoc(ordersRef, newOrder)
-            .then((response) => setIdOrder(response.id))
+            .then((response) => {
+                setIdOrder(response.id)
+                setShowAlert(true)
+            })
             .catch((error) => console.log(error))
             .finally(()=>{
                 updateStock()
@@ -51,22 +59,31 @@ const Checkout = () => {
         deleteCart()
     }
 
+    useEffect(() => {
+        if (showAlert && idOrder) {
+            Swal.fire({
+                text: 'Orden creada con éxito',
+                icon: 'success',
+                text: "Por favor guarde su número de seguimiento: " + idOrder,
+                confirmButtonText: 'Volver al inicio',
+                customClass: {
+                    confirmButton: 'bg-white text-black hover:bg-gray-200 focus:ring-gray-300',
+                }
+            }).then((result) => {
+                if (result) {
+                    navigate('/');
+                }
+                setShowAlert(false);
+            });
+        }
+    }, [showAlert, idOrder]);
+
     return (
         <div>
-            {
-                idOrder === null ? (
-                    <FormCheckout 
-                    dataForm={dataForm} 
-                    handleChangeDataForm={handleChangeDataForm} 
-                    handleSubmitForm={handleSubmitForm} />
-                ) : (
-                    <div>
-                        <h2>Orden creada con éxito</h2>
-                        <p>Porfavor guarde su numero de seguimiento: {idOrder}</p>
-                        <Link to="/">Volver al inicio</Link>
-                    </div>
-                )
-            }
+            <FormCheckout 
+            dataForm={dataForm} 
+            handleChangeDataForm={handleChangeDataForm} 
+            handleSubmitForm={handleSubmitForm} />
         </div>
     )
 }
