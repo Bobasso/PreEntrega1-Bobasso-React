@@ -9,6 +9,8 @@ import { CartProvider } from './context/CartContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Checkout from './components/Checkout/Checkout'
 import Footer from './components/Footer/Footer'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <NavBar/>
-            
+          <ToastContainer/>
+
             <main className='flex-grow'>
               <Routes>
                 <Route path="/" element={ 
